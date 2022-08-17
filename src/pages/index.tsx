@@ -14,7 +14,7 @@ const Home: FC = () => {
       <VideoHero />
       <NavBar></NavBar>
       <ThemeSwitcher className="absolute bottom-6 right-6" />
-      <div className="z-10 mx-auto max-w-7xl lg:px-8">
+      <div className="z-10 mx-auto mt-8 max-w-7xl lg:px-8 sm:mt-0">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">
           <div className="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
             <div className="lg:py-24">
