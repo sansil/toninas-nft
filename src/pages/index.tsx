@@ -4,148 +4,68 @@ import ConnectWallet from '@/components/ConnectWallet'
 import { BookOpenIcon, CodeIcon, ShareIcon } from '@heroicons/react/outline'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import NavBar from '@/components/Navbar'
-
+import VideoHero from '@/components/VideoHero'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { ChevronRightIcon } from '@heroicons/react/solid'
 
 const Home: FC = () => {
   return (
     <div className="relative flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+      <VideoHero />
       <NavBar></NavBar>
       <ThemeSwitcher className="absolute bottom-6 right-6" />
-      <div className="max-w-6xl mx-auto mt-12 sm:px-6 lg:px-8" >
-        <div className="flex justify-center pt-8 sm:justify-start sm:pt-0">
-          <h1 className="text-6xl font-bold dark:text-white">{APP_NAME}</h1>
-        </div>
-
-        <div className="mt-8 overflow-hidden bg-white shadow dark:bg-gray-800 sm:rounded-lg">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            <div className="p-6">
-              <div className="flex items-center">
-                <BookOpenIcon className="w-8 h-8 text-gray-500" />
-                <div className="ml-4 text-lg font-semibold leading-7">
-                  <a
-                    href="https://laravel.com/docs"
-                    className="text-gray-900 underline dark:text-white"
-                  >
-                    Next.js Docs
-                  </a>
-                </div>
-              </div>
-
-              <div className="ml-12">
-                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  Next.js gives you the best developer experience with all the features you need for
-                  production: hybrid static &amp; server rendering, TypeScript support, smart
-                  bundling, route pre-fetching, and more. No config needed.
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-              <div className="flex items-center">
-                <BookOpenIcon className="w-8 h-8 text-gray-500" />
-                <div className="ml-4 text-lg font-semibold leading-7">
-                  <a href="https://wagmi.sh" className="text-gray-900 underline dark:text-white">
-                    wagmi Docs
-                  </a>
-                </div>
-              </div>
-
-              <div className="ml-12">
-                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  wagmi is a collection of React Hooks containing everything you need to start working
-                  with Ethereum. wagmi makes it easy to display ENS and balance information, sign
-                  messages, interact with contracts, and much more — all with caching, request
-                  deduplication, and persistence.
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 border-t border-gray-200 dark:border-gray-700">
-              <div className="flex items-center">
-                <BookOpenIcon className="w-8 h-8 text-gray-500" />
-                <div className="ml-4 text-lg font-semibold leading-7">
-                  <a
-                    href="https://laravel-news.com/"
-                    className="text-gray-900 underline dark:text-white"
-                  >
-                    Tailwind Docs
-                  </a>
-                </div>
-              </div>
-
-              <div className="ml-12">
-                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of
-                  the building blocks you need to build bespoke designs without any annoying
-                  opinionated styles you have to fight to override.
-                </div>
-              </div>
-            </div>
-
-            <div className="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-              <div className="flex items-center">
-                <CodeIcon className="w-8 h-8 text-gray-500" />
-                <div className="ml-4 text-lg font-semibold leading-7 text-gray-900 dark:text-white">
-                  About this Template
-                </div>
-              </div>
-
-              <div className="ml-12">
-                <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-                  This starter kit is composed of{' '}
-                  <a href="https://nextjs.org" className="underline" target="_blank" rel="noreferrer">
-                    Next.js
-                  </a>{' '}
-                  and{' '}
-                  <a
-                    href="https://tailwindcss.com"
-                    className="underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Tailwind CSS
-                  </a>
-                  , with{' '}
-                  <a
-                    href="https://docs.family.co/connectkit"
-                    className="underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ConnectKit
-                  </a>
-                  ,{' '}
-                  <a href="https://ethers.org" className="underline" target="_blank" rel="noreferrer">
-                    ethers
-                  </a>{' '}
-                  &amp;{' '}
-                  <a href="https://wagmi.sh" className="underline" target="_blank" rel="noreferrer">
-                    wagmi
-                  </a>{' '}
-                  for all your web3 needs. It uses{' '}
-                  <a
-                    href="https://www.typescriptlang.org/"
-                    className="underline"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Typescript
-                  </a>{' '}
-                  and an opinionated directory structure for maximum dev confy-ness. Enjoy!
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-4 sm:items-center sm:justify-between">
-          <div className="text-sm text-center text-gray-500 sm:text-left">
-            <div className="flex items-center">
-              <ShareIcon className="w-5 h-5 -mt-px text-gray-400" />
-
-              <a href="https://twitter.com/m1guelpf" className="ml-1 underline">
-                Share
+      <div className="z-10 mx-auto max-w-7xl lg:px-8">
+        <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="max-w-md px-4 mx-auto sm:max-w-2xl sm:px-6 sm:text-center lg:px-0 lg:text-left lg:flex lg:items-center">
+            <div className="lg:py-24">
+              <a
+                href="#"
+                className="inline-flex items-center p-1 pr-2 text-white bg-black rounded-full sm:text-base lg:text-sm xl:text-base hover:text-gray-200"
+              >
+                <span className="px-3 py-0.5 text-white text-sm font-semibold leading-5 bg-indigo-500 rounded-full">
+                  early access
+                </span>
+                <span className="ml-4 text-sm">join our whitelist</span>
+                <ChevronRightIcon className="w-5 h-5 ml-2 text-gray-500" aria-hidden="true" />
               </a>
+              <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:mt-5 sm:text-6xl sm:tracking-tight lg:mt-6 xl:text-6xl xl:tracking-tight">
+                <span className="block">Save the dolphins</span>
+                <span className="block text-indigo-400">Minting NFT</span>
+              </h1>
+              <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui Lorem cupidatat commodo. Elit sunt
+                amet fugiat veniam occaecat fugiat.
+              </p>
+              <div className="mt-10 sm:mt-12">
+                <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
+                  <div className="sm:flex">
+                    <div className="mt-3 sm:mt-0 ">
+                      <button
+                        type="submit"
+                        className="block w-full px-4 py-3 font-medium text-indigo-500 bg-white rounded-md shadow hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                      >
+                        Green paper
+                      </button>
+                    </div>
+                    <div className="mt-3 sm:mt-0 sm:ml-3">
+                      <button
+                        type="submit"
+                        className="block w-full px-4 py-3 font-medium text-white bg-indigo-500 rounded-md shadow hover:bg-indigo-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                      >
+                        Mint your dolphin NFT
+                      </button>
+                    </div>
+                  </div>
+                  <p className="mt-3 text-sm text-gray-300 sm:mt-4">
+                    Start your free 14-day trial, no credit card necessary. By providing your email, you agree to
+                    our{' '}
+                    <a href="#" className="font-medium text-white">
+                      terms of service
+                    </a>
+                    .
+                  </p>
+                </form>
+              </div>
             </div>
           </div>
         </div>
