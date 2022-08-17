@@ -10,7 +10,7 @@ import { ChevronRightIcon } from '@heroicons/react/solid'
 
 const Home: FC = () => {
   return (
-    <div className="relative flex flex-col min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+    <div className="relative flex flex-col min-h-screen bg-gray-900 dark:bg-gray-900 sm:items-center sm:pt-0">
       <VideoHero />
       <NavBar></NavBar>
       <ThemeSwitcher className="absolute bottom-6 right-6" />
